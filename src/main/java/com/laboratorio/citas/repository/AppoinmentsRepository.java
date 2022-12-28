@@ -3,6 +3,7 @@ package com.laboratorio.citas.repository;
 import java.time.LocalDate;
 import java.util.Collection;
 
+
 import org.springframework.data.jpa.repository.Query;
 import org.springframework.data.repository.CrudRepository;
 

@@ -2,8 +2,13 @@ package com.laboratorio.citas.entity;
 
 import java.util.List;
 
+import com.fasterxml.jackson.annotation.JsonIdentityInfo;
+import com.fasterxml.jackson.annotation.ObjectIdGenerators;
+
+import jakarta.persistence.Basic;
 import jakarta.persistence.Column;
 import jakarta.persistence.Entity;
+import jakarta.persistence.FetchType;
 import jakarta.persistence.GeneratedValue;
 import jakarta.persistence.GenerationType;
 import jakarta.persistence.Id;
@@ -11,9 +16,10 @@ import jakarta.persistence.OneToMany;
 import jakarta.persistence.Table;
 import lombok.Data;
 
-@Data
+//@Data
 @Entity
 @Table(name="tests")
+//@JsonIdentityInfo(generator=ObjectIdGenerators.IntSequenceGenerator.class, property="@id")
 public class Tests {
 	@Id
 	@GeneratedValue(strategy=GenerationType.IDENTITY)
@@ -25,6 +31,7 @@ public class Tests {
 	private String description;
 	
 	@OneToMany(mappedBy="id_test")
+	@Basic(fetch = FetchType.EAGER)
 	private List<Appoinments> appoinments;
 	
 	
@@ -70,8 +77,4 @@ public class Tests {
 		return "Tests [id=" + id + ", name=" + name + ", description=" + description + "]";
 	}
 	
-	
-	
-	
-
 }

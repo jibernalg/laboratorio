@@ -33,7 +33,7 @@ public class AppoinmentsController {
 	@Autowired
 	private AppoinmentsService appoinmentsServiceImpl;
 	
-	@GetMapping
+	//@GetMapping
 	@RequestMapping(value="consultarAppoinments", method=RequestMethod.GET)
 	public ResponseEntity<?> consultarAppoinments(){
 		
@@ -45,7 +45,7 @@ public class AppoinmentsController {
 			return ResponseEntity.status(HttpStatus.OK).body(appoinmentsConsultados);
 		}
 	}
-	@GetMapping
+	//@GetMapping
 	@RequestMapping(value="consultarAppoinmentById/{id}",method=RequestMethod.GET)
 	public ResponseEntity<?> consultarAppoinmentById(@PathVariable int id){
 		
@@ -58,7 +58,7 @@ public class AppoinmentsController {
 		}
 	}
 	
-	@PostMapping
+	//@PostMapping
 	@RequestMapping(value="guardarAppoinment",method=RequestMethod.POST)
 	public ResponseEntity<?> guardarAppoinment(@RequestBody Appoinments appoinment){
 		
@@ -71,7 +71,7 @@ public class AppoinmentsController {
 		}
 	}
 	
-	@PutMapping
+	//@PutMapping
 	@RequestMapping(value="actualizarAppoinment",method=RequestMethod.PUT)
 	public ResponseEntity<?> actualizarAppoinment(@RequestBody Appoinments appoinment){
 		
@@ -84,7 +84,7 @@ public class AppoinmentsController {
 		}
 	}
 	
-	@DeleteMapping
+	//@DeleteMapping
 	@RequestMapping(value="eliminarAppoinment/{id}",method=RequestMethod.DELETE)
 	public ResponseEntity<?> eliminarAppoinment(@PathVariable int id){
 		
@@ -97,7 +97,7 @@ public class AppoinmentsController {
 		}
 	}
 		
-	@GetMapping
+	//@GetMapping
 	@RequestMapping
 	public ResponseEntity<?> consultarAppoinmentsByDate(@RequestParam ("date_ap")@DateTimeFormat(pattern="dd/MM/yyyy") LocalDate date_ap){
 		
@@ -110,7 +110,7 @@ public class AppoinmentsController {
 		}
 	}
 	
-	@GetMapping
+	//@GetMapping
 	@RequestMapping(value="consultarAppoinmentsByAffiliate/{id_affiliate}",method=RequestMethod.GET)
 	public ResponseEntity<?> consultarAppoinmentsByAffiliate(@PathVariable Affiliates id_affiliate){
 		

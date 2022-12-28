@@ -27,7 +27,8 @@ public class TestsController {
 	@Autowired
 	private TestsService testsServiceImpl;
 	
-	@GetMapping
+	
+	//@GetMapping
 	@RequestMapping(value="consultarTests",method=RequestMethod.GET)
 	public ResponseEntity<?> consultarTests(){
 		
@@ -40,7 +41,7 @@ public class TestsController {
 		}
 	}
 	
-	@GetMapping
+	//@GetMapping
 	@RequestMapping(value="consultarTestById/{id}",method=RequestMethod.GET)
 	public ResponseEntity<?> consultarTestById(@PathVariable int id){
 		
@@ -53,7 +54,7 @@ public class TestsController {
 		}
 	}
 	
-	@PostMapping
+	//@PostMapping
 	@RequestMapping(value="guardarTest",method=RequestMethod.POST)
 	public ResponseEntity<?> guardarTest(@RequestBody Tests test){
 		
@@ -66,7 +67,7 @@ public class TestsController {
 		}
 	}
 	
-	@PutMapping
+	//@PutMapping
 	@RequestMapping(value="actualizarTest",method=RequestMethod.PUT)
 	public ResponseEntity<?> actualizarTest(@RequestBody Tests test){
 		
@@ -80,7 +81,7 @@ public class TestsController {
 		}
 	}
 	
-	@DeleteMapping
+	//@DeleteMapping
 	@RequestMapping(value="eliminarTest/{id}",method=RequestMethod.DELETE)
 	public ResponseEntity<?> eliminarTest(@PathVariable int id){
 		

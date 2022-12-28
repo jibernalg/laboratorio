@@ -1,0 +1,269 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Lab App</title>
+<link href="/style.css" rel="stylesheet" type="text/css"/>
+<script src="main.js" defer ></script>
+<script src="renderTabla.js" defer ></script>
+<script src="toggle.js" defer ></script>
+<script src="buttons.js" defer ></script>
+<script src="post.js" defer ></script>
+<script src="find.js" defer ></script>
+<script src="edit.js" defer ></script>
+<script src="delete.js" defer ></script>
+
+</head>
+<body>
+	<div class="main">
+    	<!-- Pagina principal-->
+        <div class="titleMain">
+            <h1>CENTRO DE CITAS LABORATORIO MEDICO</h1>
+        </div>
+        <div class="optionsMain">
+            <button class="affBtn mainBtn">Usuarios</button>
+            <button class="appBtn mainBtn">Citas</button>
+            <button class="tesBtn mainBtn">Examenes</button>
+        </div>
+        
+        <!-- Pagina afiliados-->
+        <div class="titleAff hidden">
+            <h1>USUARIOS</h1>
+        </div>
+        <div class="optionsAff hidden">
+            <button class="allAffBtn">Ver todos</button>
+            <button class="addAffBtn">Agregar</button>
+            <div class="subOptionsAff">
+                <button class="findAffBtn">Consultar</button>
+                <input type="text" id="inputFindAff" placeholder="#id">
+            </div>
+            <button class="editAffBtn">Editar</button>
+            <div class="subOptionsAff">
+                <button class="delAffBtn">Eliminar</button>
+                <input type="text" id="inputDelAff" placeholder="#id">
+            </div>
+            <button class="backAffBtn">Volver</button>
+        </div>
+                
+        <div class="formularioAff hidden ">    
+            <form id="formAff" class="formAff" >
+                <label for="name">Nombre
+                    <input type="text" id="nameAff" name="name" >
+                </label>
+                <label for="age">Edad
+                    <input type="number" id="ageAff" name="age" >
+                </label>
+                <label for="mail">Email
+                    <input type="text" id="mailAff" name="mail" >
+                </label>
+            </form>
+            <div class="buttons">
+            	<button id="crearAffBtn">Crear</button>
+            	<button id="clearAffBtn">Limpiar</button>
+        	</div>
+            <div class="buttons2">
+            	<button id="verAffTabla">Ver lista</button>
+        	</div>
+        </div>
+
+        <div class="formularioEditarAff hidden ">    
+            <form id="editFormAff" class="editFormAff" >
+                <label for="id">ID
+                    <input type="number" id="idAff" name="id" >
+                </label>
+                <label for="name">Nombre
+                    <input type="text" id="nameAff" name="name" >
+                </label>
+                <label for="age">Edad
+                    <input type="number" id="ageAff" name="age" >
+                </label>
+                <label for="mail">Email
+                    <input type="text" id="mailAff" name="mail" >
+                </label>
+            </form>
+            <div class="buttons">
+            	<button id="updateAffBtn">Actualizar</button>
+        	</div>
+        </div>
+        
+        <div class="tablaAff hidden">
+        	<table class="tableAff">
+          		<thead>
+            		<tr>
+              			<th>Id</th>
+              			<th>Nombre</th>
+              			<th>Edad</th>
+              			<th>Email</th>
+              			<th></th>
+              			<th></th>  
+            		</tr>
+          		</thead>
+          		<tbody class="tbodyAff">
+            		
+          		</tbody>
+        	</table>
+        </div>
+
+        <!-- Pagina citas-->
+        <div class="titleApp hidden">
+            <h1>CITAS</h1>
+        </div>
+        <div class="optionsApp hidden">
+            <button class="allAppBtn">Ver todos</button>
+            <button class="addAppBtn">Agregar</button>
+            <div class="subOptionsApp">
+                <button class="findAppBtn">Consultar</button>
+                <input type="text" id="inputFindApp" placeholder="#id">
+            </div>
+            <button class="editAppBtn">Editar</button>
+            <div class="subOptionsApp">
+                <button class="delAppBtn">Eliminar</button>
+                <input type="text" id="inputDelApp" placeholder="#id">
+            </div>
+            <button class="backAppBtn">Volver</button>
+        </div>
+                
+        <div class="formularioApp hidden ">    
+            <form id="formApp" class="formApp" >
+                <label for="date_ap">Fecha
+                    <input type="date" id="date_ap" name="date_ap" >
+                </label>
+                <label for="hour_ap">Hora
+                    <input type="datetime" id="hour_ap" name="hour_ap" >
+                </label>
+                <label for="id_test">Codigo examen
+                    <input type="number" id="id_test" name="id_test" >
+                </label>
+                <label for="id_affiliate">Codigo usuario
+                    <input type="number" id="id_affiliate" name="id_affiliate" >
+                </label>
+            </form>
+            <div class="buttons">
+            	<button id="crearAppBtn">Crear</button>
+            	<button id="clearAppBtn">Limpiar</button>
+        	</div>
+            <div class="buttons2">
+            	<button id="verAppTabla">Ver lista</button>
+        	</div>
+        </div>
+
+        <div class="formularioEditarApp hidden ">    
+            <form id="editFormApp" class="editFormApp" >
+                <label for="id">ID
+                    <input type="number" id="idApp" name="id" >
+                </label>
+                <label for="date_ap">Fecha
+                    <input type="date" id="date_ap" name="date_ap" >
+                </label>
+                <label for="hour_ap">Hora
+                    <input type="datetime" id="hour_ap" name="hour_ap" >
+                </label>
+                <label for="id_test">Codigo examen
+                    <input type="number" id="id_test" name="id_test" >
+                </label>
+                <label for="id_affiliate">Codigo usuario
+                    <input type="number" id="id_affiliate" name="id_affiliate" >
+                </label>
+            </form>
+            <div class="buttons">
+            	<button id="updateAppBtn">Actualizar</button>
+        	</div>
+        </div>
+        
+        <div class="tablaApp hidden">
+        	<table class="tableApp">
+          		<thead>
+            		<tr>
+              			<th>Id</th>
+              			<th>Fecha</th>
+              			<th>Hora</th>
+                        <th>Codigo examen</th>
+                        <th>Nombre examen</th>
+                        <th>Tipo examen</th>
+              			<th>Codigo usuario</th>
+                        <th>Nombre usuario</th>
+                        <th>Edad usuario</th>
+                        <th>Email usuario</th>
+              			<th></th>
+              			<th></th>  
+            		</tr>
+          		</thead>
+          		<tbody class="tbodyApp">
+            		
+          		</tbody>
+        	</table>
+        </div>
+
+        <!-- Pagina examenes-->
+        <div class="titleTes hidden">
+            <h1>EXAMENES</h1>
+        </div>
+        <div class="optionsTes hidden">
+            <button class="allTesBtn">Ver todos</button>
+            <button class="addTesBtn">Agregar</button>
+            <div class="subOptionsTes">
+                <button class="findTesBtn">Consultar</button>
+                <input type="text" id="inputFindTes" placeholder="#id">
+            </div>
+            <button class="editTesBtn">Editar</button>
+            <div class="subOptionsTes">
+                <button class="delTesBtn">Eliminar</button>
+                <input type="text" id="inputDelTes" placeholder="#id">
+            </div>
+            <button class="backTesBtn">Volver</button>
+        </div>
+                
+        <div class="formularioTes hidden ">    
+            <form id="formTes" class="formTes" >
+                <label for="name">Nombre
+                    <input type="text" id="nameTes" name="name" >
+                </label>
+                <label for="description">Descripcion
+                    <input type="text" id="descriptionTes" name="description" >
+                </label>
+            </form>
+            <div class="buttons">
+            	<button id="crearTesBtn">Crear</button>
+            	<button id="clearTesBtn">Limpiar</button>
+        	</div>
+            <div class="buttons2">
+            	<button id="verTesTabla">Ver lista</button>
+        	</div>
+        </div>
+
+        <div class="formularioEditarTes hidden ">    
+            <form id="editFormTes" class="editFormTes" >
+                <label for="id">ID
+                    <input type="number" id="idTes" name="id" >
+                </label>
+                <label for="name">Nombre
+                    <input type="text" id="nameTes" name="name" >
+                </label>
+                <label for="description">Descripcion
+                    <input type="text" id="descriptionTes" name="description" >
+                </label>
+            </form>
+            <div class="buttons">
+            	<button id="updateTesBtn">Actualizar</button>
+        	</div>
+        </div>
+        
+        <div class="tablaTes hidden">
+        	<table class="tableTes">
+          		<thead>
+            		<tr>
+              			<th>Id</th>
+              			<th>Nombre</th>
+              			<th>Descripcion</th>
+              			<th></th>
+              			<th></th>  
+            		</tr>
+          		</thead>
+          		<tbody class="tbodyTes">
+            		
+          		</tbody>
+        	</table>
+        </div>
+    </div>
+</body>
+</html>
