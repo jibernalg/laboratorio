@@ -20,23 +20,23 @@ fetch('http://localhost:8080/affiliates/consultarAffiliates')
         row.appendChild(cell);
       });
       
-      var editarBtn = document.createElement('button');
-      editarBtn.innerHTML="Editar";
+      //var editarBtn = document.createElement('button');
+      //editarBtn.innerHTML="Editar";
       
     
-      var eliminarBtn = document.createElement('button');
-      eliminarBtn.innerHTML="Eliminar";
+      //var eliminarBtn = document.createElement('button');
+      //eliminarBtn.innerHTML="Eliminar";
       //eliminarBtn.setAttribute("class","delete-button")
       //eliminarBtn.setAttribute("data-id",item.id)
       
-      var celled = document.createElement('td');
-      var cellel = document.createElement('td');
+      //var celled = document.createElement('td');
+      //var cellel = document.createElement('td');
       
-      celled.appendChild(editarBtn);
-      cellel.appendChild(eliminarBtn);
+      //celled.appendChild(editarBtn);
+      //cellel.appendChild(eliminarBtn);
         
-      row.appendChild(celled);
-      row.appendChild(cellel);
+      //row.appendChild(celled);
+      //row.appendChild(cellel);
                 
       tbodyAff.appendChild(row);
     });
@@ -68,7 +68,7 @@ fetch('http://localhost:8080/appoinments/consultarAppoinments')
 
       createCells(item,row);
  
-      var editarBtn = document.createElement('button');
+      /*var editarBtn = document.createElement('button');
       editarBtn.innerHTML="Editar";
       
       var eliminarBtn = document.createElement('button');
@@ -82,7 +82,7 @@ fetch('http://localhost:8080/appoinments/consultarAppoinments')
         
       row.appendChild(celled);
       row.appendChild(cellel);
-          
+        */  
       tbodyApp.appendChild(row);
     });
     
@@ -130,23 +130,23 @@ fetch('http://localhost:8080/tests/consultarTests')
         row.appendChild(cell);
       });
       
-      var editarBtn = document.createElement('button');
-      editarBtn.innerHTML="Editar";
+      //var editarBtn = document.createElement('button');
+      //editarBtn.innerHTML="Editar";
       
     
-      var eliminarBtn = document.createElement('button');
-      eliminarBtn.innerHTML="Eliminar";
+      //var eliminarBtn = document.createElement('button');
+      //eliminarBtn.innerHTML="Eliminar";
       //eliminarBtn.setAttribute("class","delete-button")
       //eliminarBtn.setAttribute("data-id",item.id)
       
-      var celled = document.createElement('td');
-      var cellel = document.createElement('td');
+      //var celled = document.createElement('td');
+      //var cellel = document.createElement('td');
       
-      celled.appendChild(editarBtn);
-      cellel.appendChild(eliminarBtn);
+      //celled.appendChild(editarBtn);
+      //cellel.appendChild(eliminarBtn);
         
-      row.appendChild(celled);
-      row.appendChild(cellel);
+      //row.appendChild(celled);
+      //row.appendChild(cellel);
                 
       tbodyTes.appendChild(row);
     });
